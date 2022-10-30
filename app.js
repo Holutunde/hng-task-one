@@ -1,12 +1,12 @@
 const express = require('express')
-const data = require('./server/routes/datas')
+const datas = require('./server/routes/datas')
 
 const app = express()
 
-const PORT = 1300
+const PORT = 5000
 
 app.use(express.json())
 
-app.use('/data', data)
+app.use('/', datas)
 
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`))
